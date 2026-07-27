@@ -1,0 +1,27 @@
+name: Compilar PDF
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Compilar main.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          latexmk_use_xelatex: false
+
+      - name: Publicar el PDF como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: Analisis-DAR-PDF
+          path: main.pdf

@@ -1,0 +1,44 @@
+# ---------- Archivos intermedios de LaTeX ----------
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ilg
+*.ind
+*.glo
+*.gls
+*.glsdefs
+*.acn
+*.acr
+*.alg
+*.xdv
+
+# ---------- Carpetas de compilación ----------
+build/
+out/
+_minted*/
+.texpadtmp/
+
+# ---------- Sistema operativo / editor ----------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ---------- PDF ----------
+# Comenta la línea siguiente si quieres versionar el PDF final
+# main.pdf

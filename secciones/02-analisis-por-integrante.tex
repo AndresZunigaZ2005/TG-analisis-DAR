@@ -1,0 +1,182 @@
+\section{Análisis DAR por integrante}
+Cada integrante asignó de forma independiente las puntuaciones a las herramientas evaluadas, según la información técnica recopilada en la documentación oficial de cada una.
+
+En la Tabla~\ref{tab:proxy-andres} se recogen las puntuaciones asignadas por Andrés Felipe Zúñiga Zuluaga a las herramientas de proxy-caché.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\hline
+\rowcolor{gridhead} \textbf{\makecell[l]{Criterios/\\Herram.}} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+HAProxy & 0 & 3,00 & 3,00 & 3,00 & 3,00 & 1,67 & 3,00 & 3,00 & \textbf{2,87} \\ \hline
+\rowcolor{gridrow} NGINX & 1-2 & 2,75 & 2,57 & 2,25 & 3,00 & 1,00 & 3,00 & 3,00 & \textbf{2,50} \\ \hline
+Envoy & 1-2 & 1,75 & 2,86 & 3,00 & 3,00 & 2,67 & 1,00 & 3,00 & \textbf{2,43} \\ \hline
+\rowcolor{gridrow} Varnish & 0 & 2,75 & 2,14 & 1,25 & 3,00 & 1,00 & 2,00 & 3,00 & \textbf{2,12} \\ \hline
+Traefik & 0 & 1,75 & 2,29 & 3,00 & 2,00 & 2,67 & 2,00 & 3,00 & \textbf{2,31} \\ \hline
+\rowcolor{gridrow} Caddy & 0 & 1,50 & 1,29 & 3,00 & 2,00 & 1,33 & 3,00 & 3,00 & \textbf{2,02} \\ \hline
+Apache Traffic Server & 0 & 2,75 & 1,71 & 2,00 & 3,00 & 1,00 & 2,00 & 3,00 & \textbf{2,18} \\ \hline
+\rowcolor{gridrow} Kong & 1 & 1,50 & 3,00 & 2,00 & 3,00 & 3,00 & 2,00 & 2,00 & \textbf{2,28} \\ \hline
+Squid & 0 & 1,25 & 2,57 & 1,00 & 2,00 & 1,00 & 3,00 & 3,00 & \textbf{1,78} \\ \hline
+\rowcolor{gridrow} Istio & 0 & 1,25 & 2,86 & 3,00 & 3,00 & 3,00 & 1,00 & 2,00 & \textbf{2,28} \\ \hline
+Linkerd & 0 & 1,25 & 2,86 & 3,00 & 2,00 & 3,00 & 1,00 & 2,00 & \textbf{2,18} \\ \hline
+\rowcolor{gridrow} K8Sidecar & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
+Proxy-Service & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
+\rowcolor{gridrow} nuster & 0 & 2,75 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,64} \\ \hline
+\end{tabular}
+\caption{Análisis DAR proxy-caché de Andrés Felipe Zúñiga Zuluaga}
+\label{tab:proxy-andres}
+\end{table}
+
+Como se observa en la Tabla~\ref{tab:alm-andres}, se detallan las valoraciones de Andrés Felipe Zúñiga Zuluaga para las herramientas de almacenamiento.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\hline
+\rowcolor{gridhead} \textbf{Herramienta} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+Ceph & 0 & 2,75 & 3,00 & 3,00 & 3,00 & 2,67 & 1,00 & 3,00 & \textbf{2,70} \\ \hline
+\rowcolor{gridrow} Lustre & 0 & 3,00 & 2,00 & 2,75 & 3,00 & 1,00 & 1,00 & 3,00 & \textbf{2,35} \\ \hline
+JuiceFS & 0 & 2,25 & 3,00 & 3,00 & 2,00 & 2,67 & 2,00 & 3,00 & \textbf{2,58} \\ \hline
+\rowcolor{gridrow} DAOS & 0 & 3,00 & 2,00 & 2,75 & 2,00 & 1,67 & 1,00 & 3,00 & \textbf{2,32} \\ \hline
+SeaweedFS & 0 & 2,50 & 3,00 & 3,00 & 3,00 & 2,50 & 3,00 & 3,00 & \textbf{2,83} \\ \hline
+\rowcolor{gridrow} ROOT / RDataFrame / Spark / Dask / OSCAR & 1 & 1,00 & 1,00 & 1,00 & 2,00 & 1,00 & 1,00 & 3,00 & \textbf{1,20} \\ \hline
+HDFS (EC + ISA-L / SYCL) & 1 & 2,00 & 3,00 & 2,00 & 3,00 & 1,00 & 1,00 & 3,00 & \textbf{2,15} \\ \hline
+\rowcolor{gridrow} Knative + x264 / AV1 & 1 & 1,00 & 1,00 & 1,25 & 1,00 & 2,83 & 1,00 & 2,00 & \textbf{1,28} \\ \hline
+Longhorn & 0 & 1,00 & 2,00 & 1,25 & 1,00 & 2,83 & 1,00 & 3,00 & \textbf{1,53} \\ \hline
+\rowcolor{gridrow} ExaHDF5 & 1 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 3,00 & \textbf{1,35} \\ \hline
+HDF5 & 1-2 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 3,00 & \textbf{1,35} \\ \hline
+\rowcolor{gridrow} MinIO & 0 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & 1,00 & \textbf{1,10} \\ \hline
+HDFS & 1 & 1,50 & 2,00 & 2,00 & 3,00 & 1,00 & 1,00 & 3,00 & \textbf{1,83} \\ \hline
+\rowcolor{gridrow} RustFS & 0 & 2,75 & 2,00 & 1,00 & 1,00 & 1,00 & 2,00 & 1,00 & \textbf{1,74} \\ \hline
+BeeOND & 1 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,30} \\ \hline
+\rowcolor{gridrow} OpenStack Swift & 0 & 1,25 & 2,00 & 1,75 & 2,00 & 1,00 & 1,00 & 2,00 & \textbf{1,56} \\ \hline
+Garage & 0 & 1,25 & 2,00 & 2,00 & 1,00 & 1,00 & 3,00 & 2,00 & \textbf{1,71} \\ \hline
+\rowcolor{gridrow} IPFS & 1 & 1,00 & 2,00 & 1,00 & 1,00 & 1,00 & 2,00 & 2,00 & \textbf{1,35} \\ \hline
+GekkoFS & 1 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,25} \\ \hline
+\rowcolor{gridrow} GlusterFS & 0 & 1,25 & 2,00 & 1,00 & 2,00 & 1,00 & 2,00 & 1,00 & \textbf{1,46} \\ \hline
+BurstFS & 1 & 1,50 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,13} \\ \hline
+\rowcolor{gridrow} TEES & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
+\end{tabular}
+\caption{Análisis DAR herramientas de almacenamiento de Andrés Felipe Zúñiga Zuluaga}
+\label{tab:alm-andres}
+\end{table}
+
+La Tabla~\ref{tab:proxy-santiago} presenta la evaluación de proxy-caché realizada por Santiago Quintero Uribe.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\hline
+\rowcolor{gridhead} \textbf{\makecell[l]{Criterios/\\Herram.}} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+HAProxy & 0 & 2,50 & 3,00 & 2,25 & 3,00 & 2,50 & 3,00 & 3,00 & \textbf{2,68} \\ \hline
+\rowcolor{gridrow} NGINX & 1-2 & 3,00 & 2,71 & 2,00 & 2,50 & 2,00 & 3,00 & 3,00 & \textbf{2,59} \\ \hline
+Envoy & 1-2 & 2,25 & 2,86 & 2,50 & 2,00 & 2,50 & 1,00 & 3,00 & \textbf{2,33} \\ \hline
+\rowcolor{gridrow} Varnish & 0 & 2,50 & 1,71 & 1,25 & 2,00 & 1,83 & 2,00 & 3,00 & \textbf{1,95} \\ \hline
+Traefik & 0 & 1,75 & 2,29 & 3,00 & 2,00 & 2,33 & 2,00 & 3,00 & \textbf{2,28} \\ \hline
+\rowcolor{gridrow} Caddy & 0 & 1,50 & 1,71 & 3,00 & 2,00 & 1,83 & 3,00 & 3,00 & \textbf{2,15} \\ \hline
+Apache Traffic Server & 0 & 2,75 & 2,00 & 2,00 & 2,50 & 2,00 & 2,00 & 3,00 & \textbf{2,29} \\ \hline
+\rowcolor{gridrow} Kong & 1 & 2,25 & 3,00 & 2,25 & 2,00 & 2,50 & 2,00 & 2,00 & \textbf{2,36} \\ \hline
+Squid & 0 & 2,25 & 2,43 & 1,50 & 2,50 & 2,17 & 3,00 & 3,00 & \textbf{2,26} \\ \hline
+\rowcolor{gridrow} Istio & 0 & 1,25 & 3,00 & 2,50 & 2,00 & 2,50 & 1,00 & 2,00 & \textbf{2,06} \\ \hline
+Linkerd & 0 & 1,25 & 1,71 & 2,25 & 1,50 & 2,33 & 1,00 & 2,00 & \textbf{1,69} \\ \hline
+\rowcolor{gridrow} K8Sidecar & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
+Proxy-Service & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
+\rowcolor{gridrow} nuster & 0 & 3,00 & 2,71 & 2,00 & 2,00 & 2,00 & 1,00 & 1,00 & \textbf{2,24} \\ \hline
+\end{tabular}
+\caption{Análisis DAR proxy-caché de Santiago Quintero Uribe}
+\label{tab:proxy-santiago}
+\end{table}
+
+En la Tabla~\ref{tab:alm-santiago} se muestran las puntuaciones de almacenamiento asignadas por Santiago Quintero Uribe.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\hline
+\rowcolor{gridhead} \textbf{Herramienta} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+Ceph & 0 & 3,00 & 3,00 & 2,50 & 3,00 & 2,83 & 1,00 & 3,00 & \textbf{2,68} \\ \hline
+\rowcolor{gridrow} Lustre & 0 & 3,00 & 3,00 & 1,25 & 2,00 & 1,83 & 1,00 & 3,00 & \textbf{2,23} \\ \hline
+JuiceFS & 0 & 2,50 & 3,00 & 2,25 & 3,00 & 2,50 & 2,00 & 3,00 & \textbf{2,58} \\ \hline
+\rowcolor{gridrow} DAOS & 0 & 3,00 & 3,00 & 1,25 & 2,00 & 1,67 & 1,00 & 3,00 & \textbf{2,22} \\ \hline
+SeaweedFS & 0 & 3,00 & 3,00 & 2,25 & 3,00 & 2,00 & 3,00 & 3,00 & \textbf{2,75} \\ \hline
+\rowcolor{gridrow} ROOT / RDataFrame / Spark / Dask / OSCAR & 1 & 1,75 & 2,00 & 1,25 & 2,00 & 1,67 & 1,00 & 3,00 & \textbf{1,70} \\ \hline
+HDFS (EC + ISA-L / SYCL) & 1 & 2,75 & 3,00 & 2,00 & 2,00 & 1,83 & 1,00 & 3,00 & \textbf{2,32} \\ \hline
+\rowcolor{gridrow} Knative + x264 / AV1 & 1 & 1,50 & 2,00 & 2,25 & 2,00 & 1,67 & 1,00 & 2,00 & \textbf{1,79} \\ \hline
+Longhorn & 0 & 2,00 & 2,00 & 2,00 & 3,00 & 2,17 & 1,00 & 3,00 & \textbf{2,07} \\ \hline
+\rowcolor{gridrow} ExaHDF5 & 1 & 2,50 & 2,00 & 1,00 & 2,00 & 1,00 & 1,00 & 3,00 & \textbf{1,78} \\ \hline
+HDF5 & 1-2 & 2,00 & 1,00 & 1,00 & 2,00 & 1,00 & 1,00 & 3,00 & \textbf{1,45} \\ \hline
+\rowcolor{gridrow} MinIO & 0 & 3,00 & 3,00 & 2,25 & 3,00 & 2,83 & 2,00 & 1,00 & \textbf{2,63} \\ \hline
+HDFS & 1 & 2,25 & 3,00 & 2,00 & 2,00 & 1,83 & 1,00 & 3,00 & \textbf{2,20} \\ \hline
+\rowcolor{gridrow} RustFS & 0 & 3,00 & 2,00 & 2,25 & 3,00 & 2,33 & 2,00 & 1,00 & \textbf{2,38} \\ \hline
+BeeOND & 1 & 2,25 & 2,00 & 1,25 & 2,00 & 1,00 & 1,00 & 2,00 & \textbf{1,71} \\ \hline
+\rowcolor{gridrow} OpenStack Swift & 0 & 2,25 & 3,00 & 2,25 & 2,00 & 2,00 & 1,00 & 2,00 & \textbf{2,21} \\ \hline
+Garage & 0 & 2,25 & 2,00 & 2,00 & 3,00 & 2,00 & 3,00 & 2,00 & \textbf{2,26} \\ \hline
+\rowcolor{gridrow} IPFS & 1 & 1,75 & 2,00 & 1,25 & 1,00 & 1,50 & 2,00 & 2,00 & \textbf{1,64} \\ \hline
+GekkoFS & 1 & 2,25 & 2,00 & 1,00 & 2,00 & 1,00 & 1,00 & 1,00 & \textbf{1,61} \\ \hline
+\rowcolor{gridrow} GlusterFS & 0 & 2,00 & 2,00 & 1,00 & 2,00 & 1,17 & 2,00 & 1,00 & \textbf{1,67} \\ \hline
+BurstFS & 1 & 2,25 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,51} \\ \hline
+\rowcolor{gridrow} TEES & 1 & 2,25 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,56} \\ \hline
+\end{tabular}
+\caption{Análisis DAR herramientas de almacenamiento de Santiago Quintero Uribe}
+\label{tab:alm-santiago}
+\end{table}
+
+La Tabla~\ref{tab:proxy-juan} contiene la valoración de proxy-caché de Juan Manuel Perdomo Cárdenas.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\hline
+\rowcolor{gridhead} \textbf{\makecell[l]{Criterios/\\Herram.}} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+HAProxy & 0 & 3,00 & 3,00 & 3,00 & 3,00 & 1,67 & 3,00 & 3,00 & \textbf{2,87} \\ \hline
+\rowcolor{gridrow} NGINX & 1-2 & 2,75 & 2,57 & 2,25 & 3,00 & 1,33 & 3,00 & 3,00 & \textbf{2,54} \\ \hline
+Envoy & 1-2 & 1,75 & 2,86 & 3,00 & 3,00 & 2,67 & 1,00 & 3,00 & \textbf{2,43} \\ \hline
+\rowcolor{gridrow} Varnish & 0 & 2,75 & 2,14 & 1,25 & 2,50 & 1,00 & 2,00 & 3,00 & \textbf{2,07} \\ \hline
+Traefik & 0 & 1,75 & 2,29 & 3,00 & 2,00 & 2,67 & 2,00 & 3,00 & \textbf{2,31} \\ \hline
+\rowcolor{gridrow} Caddy & 0 & 1,50 & 1,29 & 3,00 & 2,00 & 1,33 & 3,00 & 3,00 & \textbf{2,02} \\ \hline
+Apache Traffic Server & 0 & 2,75 & 1,71 & 2,00 & 3,00 & 1,17 & 2,00 & 3,00 & \textbf{2,20} \\ \hline
+\rowcolor{gridrow} Kong & 1 & 1,50 & 3,00 & 2,00 & 3,00 & 3,00 & 2,00 & 2,00 & \textbf{2,28} \\ \hline
+Squid & 0 & 2,75 & 2,71 & 1,25 & 2,50 & 2,17 & 3,00 & 3,00 & \textbf{2,40} \\ \hline
+\rowcolor{gridrow} Istio & 0 & 1,25 & 2,86 & 3,00 & 3,00 & 3,00 & 1,00 & 2,00 & \textbf{2,28} \\ \hline
+Linkerd & 0 & 1,25 & 2,86 & 3,00 & 2,00 & 3,00 & 1,00 & 2,00 & \textbf{2,18} \\ \hline
+\rowcolor{gridrow} K8Sidecar & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
+Proxy-Service & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
+\rowcolor{gridrow} nuster & 0 & 2,75 & 2,14 & 1,00 & 2,00 & 1,17 & 1,00 & 1,00 & \textbf{1,78} \\ \hline
+\end{tabular}
+\caption{Análisis DAR proxy-caché de Juan Manuel Perdomo Cárdenas}
+\label{tab:proxy-juan}
+\end{table}
+
+Como se aprecia en la Tabla~\ref{tab:alm-juan}, se presentan las puntuaciones de almacenamiento de Juan Manuel Perdomo Cárdenas.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\hline
+\rowcolor{gridhead} \textbf{Herramienta} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+Ceph & 0 & 2,75 & 3,00 & 2,25 & 3,00 & 2,00 & 1,00 & 3,00 & \textbf{2,49} \\ \hline
+\rowcolor{gridrow} Lustre & 0 & 2,75 & 2,00 & 1,25 & 3,00 & 1,17 & 1,00 & 3,00 & \textbf{2,00} \\ \hline
+JuiceFS & 0 & 2,25 & 3,00 & 2,25 & 2,00 & 2,00 & 2,00 & 3,00 & \textbf{2,36} \\ \hline
+\rowcolor{gridrow} DAOS & 0 & 2,75 & 2,00 & 1,25 & 2,00 & 1,50 & 1,00 & 3,00 & \textbf{1,94} \\ \hline
+SeaweedFS & 0 & 2,25 & 3,00 & 2,25 & 2,00 & 1,50 & 3,00 & 3,00 & \textbf{2,41} \\ \hline
+\rowcolor{gridrow} ROOT / RDataFrame / Spark / Dask / OSCAR & 1 & 1,00 & 1,00 & 1,00 & 2,00 & 1,00 & 1,00 & 3,00 & \textbf{1,20} \\ \hline
+HDFS (EC + ISA-L / SYCL) & 1 & 2,00 & 3,00 & 2,00 & 3,00 & 1,17 & 1,00 & 3,00 & \textbf{2,17} \\ \hline
+\rowcolor{gridrow} Knative + x264 / AV1 & 1 & 1,00 & 1,00 & 1,25 & 1,00 & 1,50 & 1,00 & 2,00 & \textbf{1,15} \\ \hline
+Longhorn & 0 & 1,25 & 2,00 & 1,25 & 2,00 & 1,50 & 1,00 & 3,00 & \textbf{1,56} \\ \hline
+\rowcolor{gridrow} ExaHDF5 & 1 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 3,00 & \textbf{1,35} \\ \hline
+HDF5 & 1-2 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 3,00 & \textbf{1,35} \\ \hline
+\rowcolor{gridrow} MinIO & 0 & 2,50 & 3,00 & 2,00 & 3,00 & 1,50 & 2,00 & 1,00 & \textbf{2,33} \\ \hline
+HDFS & 1 & 1,50 & 2,00 & 2,00 & 3,00 & 1,17 & 1,00 & 3,00 & \textbf{1,84} \\ \hline
+\rowcolor{gridrow} RustFS & 0 & 2,25 & 2,00 & 1,00 & 2,00 & 1,00 & 2,00 & 1,00 & \textbf{1,71} \\ \hline
+BeeOND & 1 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,30} \\ \hline
+\rowcolor{gridrow} OpenStack Swift & 0 & 1,50 & 3,00 & 1,75 & 2,00 & 1,33 & 1,00 & 2,00 & \textbf{1,86} \\ \hline
+Garage & 0 & 1,50 & 2,00 & 2,00 & 2,00 & 1,17 & 3,00 & 2,00 & \textbf{1,89} \\ \hline
+\rowcolor{gridrow} IPFS & 1 & 1,25 & 2,00 & 1,25 & 1,00 & 1,17 & 2,00 & 2,00 & \textbf{1,48} \\ \hline
+GekkoFS & 1 & 2,00 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,45} \\ \hline
+\rowcolor{gridrow} GlusterFS & 0 & 2,00 & 2,00 & 2,00 & 2,00 & 1,33 & 2,00 & 1,00 & \textbf{1,88} \\ \hline
+BurstFS & 1 & 1,50 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,13} \\ \hline
+\rowcolor{gridrow} TEES & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
+\end{tabular}
+\caption{Análisis DAR herramientas de almacenamiento de Juan Manuel Perdomo Cárdenas}
+\label{tab:alm-juan}
+\end{table}

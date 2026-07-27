@@ -1,0 +1,71 @@
+% =====================================================================
+%  PREÁMBULO — Análisis DAR
+%  Configuración de paquetes, colores, tablas y leyendas.
+% =====================================================================
+
+% ---------- Codificación e idioma -----------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% Si tu distribución tiene el idioma instalado (Overleaf/TeX Live full),
+% descomenta la línea siguiente para partición silábica en español:
+% \usepackage[spanish,es-nodecimaldot]{babel}
+
+% ---------- Geometría de página --------------------------------------
+\usepackage[a4paper,margin=2.5cm]{geometry}
+
+% ---------- Tablas ----------------------------------------------------
+\usepackage{array}
+\usepackage{makecell}
+\usepackage[table]{xcolor}
+\usepackage{ragged2e}
+\usepackage{float}        % habilita el especificador [H] (tabla inquebrable)
+\usepackage{graphicx}
+\usepackage{caption}
+
+% ---------- Enlaces ---------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue,
+  pdftitle={Análisis DAR — Proxy-Caché y Almacenamiento de Archivos},
+  pdfauthor={Santiago Quintero Uribe, Juan Manuel Perdomo Cárdenas, Andrés Felipe Zúñiga Zuluaga}
+}
+
+% ---------- Colores institucionales / de tabla ------------------------
+\definecolor{gridhead}{HTML}{C5E0B3}   % verde claro de encabezado
+\definecolor{gridrow}{HTML}{CCCCCC}    % gris de filas alternas
+\definecolor{verdeuq}{HTML}{009B3A}    % verde Universidad del Quindío
+
+% =====================================================================
+%  LEYENDAS (captions) DEBAJO DE LA TABLA
+% =====================================================================
+% position=bottom  -> el paquete caption calcula el espaciado asumiendo
+%                     que el \caption va DEBAJO del contenido.
+% skip=6pt         -> separación entre la tabla y su leyenda.
+% justification    -> leyenda centrada si cabe en una línea, justificada
+%                     si ocupa varias.
+\captionsetup[table]{
+  name=Tabla,
+  labelfont=bf,
+  labelsep=period,
+  position=bottom,
+  skip=6pt,
+  font=small,
+  justification=centering,
+  singlelinecheck=true
+}
+
+% =====================================================================
+%  APARIENCIA DE LAS TABLAS
+% =====================================================================
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{4pt}
+
+% Espacio antes/después de cada entorno table colocado con [H]
+\setlength{\intextsep}{12pt plus 3pt minus 3pt}
+
+% Tolerancia de página: evita que LaTeX estire en exceso el texto
+% cuando una tabla se empuja a la página siguiente.
+\raggedbottom

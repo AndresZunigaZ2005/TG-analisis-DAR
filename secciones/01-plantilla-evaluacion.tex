@@ -1,0 +1,65 @@
+\section{Plantilla de evaluación}
+Para estandarizar la valoración, cada integrante empleó una plantilla común con los siete criterios ponderados del método DAR (escala de 1 a 3).
+
+\medskip\noindent\textit{Abreviaturas de las columnas:} Rend.\ = Rendimiento Técnico (25\%); Esc.\ = Escalabilidad (20\%); Sop.\ = Soporte y Mantenimiento (20\%); Adop.\ = Adopción y Madurez (10\%); Obs.\ = Observabilidad (10\%); Adec.\ = Adecuación al Contexto GRID (10\%); Riesgo = Riesgo Tecnológico (5\%); DAR = Puntuación DAR (suma ponderada). Escala: 1 (bajo) a 3 (alto).\par\medskip
+
+
+La Tabla~\ref{tab:plantilla-proxy} presenta la plantilla de análisis DAR empleada para evaluar las herramientas de proxy-caché, con los criterios y sus respectivos pesos.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\hline
+\rowcolor{gridhead} \textbf{\makecell[l]{Criterios/\\Herram.}} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+HAProxy & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} NGINX & 1-2 &  &  &  &  &  &  &  &  \\ \hline
+Envoy & 1-2 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} Varnish & 0 &  &  &  &  &  &  &  &  \\ \hline
+Traefik & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} Caddy & 0 &  &  &  &  &  &  &  &  \\ \hline
+Apache Traffic Server & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} Kong & 1 &  &  &  &  &  &  &  &  \\ \hline
+Squid & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} Istio & 0 &  &  &  &  &  &  &  &  \\ \hline
+Linkerd & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} K8Sidecar & 1 &  &  &  &  &  &  &  &  \\ \hline
+Proxy-Service & 1 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} nuster & 0 &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}
+\caption{Plantilla análisis DAR proxy-caché}
+\label{tab:plantilla-proxy}
+\end{table}
+
+De igual manera, en la Tabla~\ref{tab:plantilla-alm} se muestra la plantilla de análisis DAR aplicada a las herramientas de almacenamiento.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\hline
+\rowcolor{gridhead} \textbf{Herramienta} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+Ceph & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} Lustre & 0 &  &  &  &  &  &  &  &  \\ \hline
+JuiceFS & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} DAOS & 0 &  &  &  &  &  &  &  &  \\ \hline
+SeaweedFS & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} ROOT / RDataFrame / Spark / Dask / OSCAR & 1 &  &  &  &  &  &  &  &  \\ \hline
+HDFS (EC + ISA-L / SYCL) & 1 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} Knative + x264 / AV1 & 1 &  &  &  &  &  &  &  &  \\ \hline
+Longhorn & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} ExaHDF5 & 1 &  &  &  &  &  &  &  &  \\ \hline
+HDF5 & 1-2 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} MinIO & 0 &  &  &  &  &  &  &  &  \\ \hline
+HDFS & 1 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} RustFS & 0 &  &  &  &  &  &  &  &  \\ \hline
+BeeOND & 1 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} OpenStack Swift & 0 &  &  &  &  &  &  &  &  \\ \hline
+Garage & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} IPFS & 1 &  &  &  &  &  &  &  &  \\ \hline
+GekkoFS & 1 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} GlusterFS & 0 &  &  &  &  &  &  &  &  \\ \hline
+BurstFS & 1 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} TEES & 1 &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}
+\caption{Plantilla análisis DAR almacenamiento}
+\label{tab:plantilla-alm}
+\end{table}
