@@ -21,6 +21,8 @@
 \usepackage{float}        % habilita el especificador [H] (tabla inquebrable)
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{fancyhdr}
+\setlength{\headheight}{13.6pt}
 
 % ---------- Enlaces ---------------------------------------------------
 \usepackage{hyperref}
@@ -33,24 +35,32 @@
   pdfauthor={Santiago Quintero Uribe, Juan Manuel Perdomo Cárdenas, Andrés Felipe Zúñiga Zuluaga}
 }
 
+% ---------- Numeración de página estilo APA 7 ------------------------
+% APA 7 para trabajos estudiantiles usa solo el número de página en el
+% encabezado superior derecho. No se incluye running head salvo que se exija.
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
 % ---------- Colores institucionales / de tabla ------------------------
 \definecolor{gridhead}{HTML}{C5E0B3}   % verde claro de encabezado
 \definecolor{gridrow}{HTML}{CCCCCC}    % gris de filas alternas
 \definecolor{verdeuq}{HTML}{009B3A}    % verde Universidad del Quindío
 
 % =====================================================================
-%  LEYENDAS (captions) DEBAJO DE LA TABLA
+%  LEYENDAS (captions) DE TABLAS
 % =====================================================================
-% position=bottom  -> el paquete caption calcula el espaciado asumiendo
-%                     que el \caption va DEBAJO del contenido.
-% skip=6pt         -> separación entre la tabla y su leyenda.
+% position=top     -> el paquete caption calcula el espaciado asumiendo
+%                     que el \caption va ENCIMA del contenido.
+% skip=6pt         -> separación entre la leyenda y la tabla.
 % justification    -> leyenda centrada si cabe en una línea, justificada
 %                     si ocupa varias.
 \captionsetup[table]{
   name=Tabla,
   labelfont=bf,
   labelsep=period,
-  position=bottom,
+  position=top,
   skip=6pt,
   font=small,
   justification=centering,

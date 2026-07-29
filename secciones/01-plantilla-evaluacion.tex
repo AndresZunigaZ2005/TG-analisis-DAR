@@ -7,7 +7,10 @@ Para estandarizar la valoración, cada integrante empleó una plantilla común c
 La Tabla~\ref{tab:plantilla-proxy} presenta la plantilla de análisis DAR empleada para evaluar las herramientas de proxy-caché, con los criterios y sus respectivos pesos.
 
 \begin{table}[H]
-\centering\footnotesize
+\centering
+\caption{Plantilla análisis DAR proxy-caché}
+\label{tab:plantilla-proxy}
+\footnotesize
 \begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
 \hline
 \rowcolor{gridhead} \textbf{\makecell[l]{Criterios/\\Herram.}} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
@@ -26,14 +29,15 @@ Linkerd & 0 &  &  &  &  &  &  &  &  \\ \hline
 Proxy-Service & 1 &  &  &  &  &  &  &  &  \\ \hline
 \rowcolor{gridrow} nuster & 0 &  &  &  &  &  &  &  &  \\ \hline
 \end{tabular}
-\caption{Plantilla análisis DAR proxy-caché}
-\label{tab:plantilla-proxy}
 \end{table}
 
 De igual manera, en la Tabla~\ref{tab:plantilla-alm} se muestra la plantilla de análisis DAR aplicada a las herramientas de almacenamiento.
 
 \begin{table}[H]
-\centering\footnotesize
+\centering
+\caption{Plantilla análisis DAR almacenamiento}
+\label{tab:plantilla-alm}
+\footnotesize
 \begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
 \hline
 \rowcolor{gridhead} \textbf{Herramienta} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
@@ -60,6 +64,4 @@ GekkoFS & 1 &  &  &  &  &  &  &  &  \\ \hline
 BurstFS & 1 &  &  &  &  &  &  &  &  \\ \hline
 \rowcolor{gridrow} TEES & 1 &  &  &  &  &  &  &  &  \\ \hline
 \end{tabular}
-\caption{Plantilla análisis DAR almacenamiento}
-\label{tab:plantilla-alm}
 \end{table}
