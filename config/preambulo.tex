@@ -1,12 +1,12 @@
 % =====================================================================
-%  PREÁMBULO — Análisis DAR
-%  Configuración de paquetes, colores, tablas y leyendas.
+%  PREÁMBULO — Resumen / Análisis DAR
+%  Paquetes, colores, estilo de tablas y leyendas.
 % =====================================================================
 
 % ---------- Codificación e idioma -----------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-% Si tu distribución tiene el idioma instalado (Overleaf/TeX Live full),
+% Si tu distribución tiene el idioma instalado (Overleaf / TeX Live full),
 % descomenta la línea siguiente para partición silábica en español:
 % \usepackage[spanish,es-nodecimaldot]{babel}
 
@@ -19,48 +19,39 @@
 \usepackage[table]{xcolor}
 \usepackage{ragged2e}
 \usepackage{float}        % habilita el especificador [H] (tabla inquebrable)
-\usepackage{graphicx}
 \usepackage{caption}
-\usepackage{fancyhdr}
-\setlength{\headheight}{13.6pt}
 
-% ---------- Enlaces ---------------------------------------------------
+% ---------- Listas ----------------------------------------------------
+\usepackage{enumitem}     % permite continuar la numeración entre subsecciones
+
+% ---------- Gráficos y enlaces ---------------------------------------
+\usepackage{graphicx}
+\usepackage{url}
 \usepackage{hyperref}
 \hypersetup{
   colorlinks=true,
   linkcolor=black,
   citecolor=black,
   urlcolor=blue,
-  pdftitle={Análisis DAR — Proxy-Caché y Almacenamiento de Archivos},
-  pdfauthor={Santiago Quintero Uribe, Juan Manuel Perdomo Cárdenas, Andrés Felipe Zúñiga Zuluaga}
+  pdftitle={Resumen de la caracterización de las Tecnologías Proxy-Caché
+            y Almacenamiento de Archivos},
+  pdfauthor={Santiago Quintero Uribe, Juan Manuel Perdomo Cárdenas,
+             Andrés Felipe Zúñiga Zuluaga}
 }
-
-% ---------- Numeración de página estilo APA 7 ------------------------
-% APA 7 para trabajos estudiantiles usa solo el número de página en el
-% encabezado superior derecho. No se incluye running head salvo que se exija.
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[R]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
 
 % ---------- Colores institucionales / de tabla ------------------------
 \definecolor{gridhead}{HTML}{C5E0B3}   % verde claro de encabezado
-\definecolor{gridrow}{HTML}{CCCCCC}    % gris de filas alternas
+\definecolor{gridrow}{HTML}{EFEFEF}    % gris suave de filas alternas
 \definecolor{verdeuq}{HTML}{009B3A}    % verde Universidad del Quindío
 
 % =====================================================================
-%  LEYENDAS (captions) DE TABLAS
+%  LEYENDAS (captions) DEBAJO DE LA TABLA
 % =====================================================================
-% position=top     -> el paquete caption calcula el espaciado asumiendo
-%                     que el \caption va ENCIMA del contenido.
-% skip=6pt         -> separación entre la leyenda y la tabla.
-% justification    -> leyenda centrada si cabe en una línea, justificada
-%                     si ocupa varias.
 \captionsetup[table]{
   name=Tabla,
   labelfont=bf,
   labelsep=period,
-  position=top,
+  position=bottom,      % el paquete caption calcula el espaciado hacia abajo
   skip=6pt,
   font=small,
   justification=centering,
@@ -71,11 +62,21 @@
 %  APARIENCIA DE LAS TABLAS
 % =====================================================================
 \renewcommand{\arraystretch}{1.25}
-\setlength{\tabcolsep}{4pt}
-
-% Espacio antes/después de cada entorno table colocado con [H]
+\setlength{\tabcolsep}{2.5pt}
 \setlength{\intextsep}{12pt plus 3pt minus 3pt}
 
-% Tolerancia de página: evita que LaTeX estire en exceso el texto
-% cuando una tabla se empuja a la página siguiente.
+% Evita que LaTeX estire el texto cuando una tabla se empuja de página
 \raggedbottom
+
+% =====================================================================
+%  ESPACIADO DE PÁRRAFOS
+% =====================================================================
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{0pt}
+
+% ---------- Cabeceras de tabla (paquete makecell) ---------------------
+\renewcommand{\theadfont}{\bfseries}
+\renewcommand{\theadalign}{cc}
+
+% Margen de tolerancia para líneas largas sin puntos de división silábica
+\setlength{\emergencystretch}{3em}

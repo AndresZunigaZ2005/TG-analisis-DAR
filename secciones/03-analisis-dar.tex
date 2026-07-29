@@ -1,16 +1,24 @@
-\section{Análisis DAR por integrante}
-Cada integrante asignó de forma independiente las puntuaciones a las herramientas evaluadas, según la información técnica recopilada en la documentación oficial de cada una.
+%% ====================================================================
+%%  Análisis DAR
+%% ====================================================================
+\section{Análisis DAR}\label{sec:analisis}
 
-En la Tabla~\ref{tab:proxy-andres} se recogen las puntuaciones asignadas por Andrés Felipe Zúñiga Zuluaga a las herramientas de proxy-caché.
+Después de definir una plantilla, siguiendo estos criterios y con el
+apoyo de las métricas previamente mencionadas, en esta sección se va a
+hacer una valoración de cada una de las herramientas. Cada uno de los
+integrantes del proyecto va a realizar una puntuación con respecto a la
+información que se reunió en la plantilla y la información encontrada en
+la documentación oficial de cada herramienta. A continuación, se
+presentan los resultados de la Matriz DAR.
+
+En la Tabla~\ref{tab:dar-proxy-azz} se recogen las puntuaciones asignadas por Andrés Felipe
+Zúñiga Zuluaga a las herramientas de proxy-caché.
 
 \begin{table}[H]
-\centering
-\caption{Análisis DAR proxy-caché de Andrés Felipe Zúñiga Zuluaga}
-\label{tab:proxy-andres}
-\footnotesize
-\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\centering\footnotesize
+\begin{tabular}{|>{\raggedright\arraybackslash\bfseries}p{2.4cm}|c|c|c|c|c|c|c|c|c|}
 \hline
-\rowcolor{gridhead} \textbf{\makecell[l]{Criterios/\\Herram.}} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+\rowcolor{gridhead} \thead[l]{Criterios/\\Herram.} & \thead{Frec.\\SMS} & \thead{Rend.\\(25\%)} & \thead{Esc.\\(20\%)} & \thead{Sop.\\(20\%)} & \thead{Adop.\\(10\%)} & \thead{Obs.\\(10\%)} & \thead{Adec.\\(10\%)} & \thead{Riesgo\\(5\%)} & \thead{DAR} \\ \hline
 HAProxy & 0 & 3,00 & 3,00 & 3,00 & 3,00 & 1,67 & 3,00 & 3,00 & \textbf{2,87} \\ \hline
 \rowcolor{gridrow} NGINX & 1-2 & 2,75 & 2,57 & 2,25 & 3,00 & 1,00 & 3,00 & 3,00 & \textbf{2,50} \\ \hline
 Envoy & 1-2 & 1,75 & 2,86 & 3,00 & 3,00 & 2,67 & 1,00 & 3,00 & \textbf{2,43} \\ \hline
@@ -26,18 +34,18 @@ Linkerd & 0 & 1,25 & 2,86 & 3,00 & 2,00 & 3,00 & 1,00 & 2,00 & \textbf{2,18} \\ 
 Proxy-Service & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
 \rowcolor{gridrow} nuster & 0 & 2,75 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,64} \\ \hline
 \end{tabular}
+\caption{Análisis DAR proxy-caché de Andrés Felipe Zúñiga Zuluaga}
+\label{tab:dar-proxy-azz}
 \end{table}
 
-Como se observa en la Tabla~\ref{tab:alm-andres}, se detallan las valoraciones de Andrés Felipe Zúñiga Zuluaga para las herramientas de almacenamiento.
+Como se observa en la Tabla~\ref{tab:dar-almac-azz}, se detallan las valoraciones de Andrés
+Felipe Zúñiga Zuluaga para las herramientas de almacenamiento.
 
 \begin{table}[H]
-\centering
-\caption{Análisis DAR herramientas de almacenamiento de Andrés Felipe Zúñiga Zuluaga}
-\label{tab:alm-andres}
-\footnotesize
-\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\centering\footnotesize
+\begin{tabular}{|>{\raggedright\arraybackslash\bfseries}p{2.7cm}|c|c|c|c|c|c|c|c|c|}
 \hline
-\rowcolor{gridhead} \textbf{Herramienta} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+\rowcolor{gridhead} \thead[l]{Herramienta} & \thead{Frec.\\SMS} & \thead{Rend.\\(25\%)} & \thead{Esc.\\(20\%)} & \thead{Sop.\\(20\%)} & \thead{Adop.\\(10\%)} & \thead{Obs.\\(10\%)} & \thead{Adec.\\(10\%)} & \thead{Riesgo\\(5\%)} & \thead{DAR} \\ \hline
 Ceph & 0 & 2,75 & 3,00 & 3,00 & 3,00 & 2,67 & 1,00 & 3,00 & \textbf{2,70} \\ \hline
 \rowcolor{gridrow} Lustre & 0 & 3,00 & 2,00 & 2,75 & 3,00 & 1,00 & 1,00 & 3,00 & \textbf{2,35} \\ \hline
 JuiceFS & 0 & 2,25 & 3,00 & 3,00 & 2,00 & 2,67 & 2,00 & 3,00 & \textbf{2,58} \\ \hline
@@ -61,18 +69,18 @@ GekkoFS & 1 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,25} \\ 
 BurstFS & 1 & 1,50 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,13} \\ \hline
 \rowcolor{gridrow} TEES & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
 \end{tabular}
+\caption{Análisis DAR herramientas de almacenamiento de Andrés Felipe Zúñiga Zuluaga}
+\label{tab:dar-almac-azz}
 \end{table}
 
-La Tabla~\ref{tab:proxy-santiago} presenta la evaluación de proxy-caché realizada por Santiago Quintero Uribe.
+La Tabla~\ref{tab:dar-proxy-squ} presenta la evaluación de proxy-caché realizada por Santiago
+Quintero Uribe.
 
 \begin{table}[H]
-\centering
-\caption{Análisis DAR proxy-caché de Santiago Quintero Uribe}
-\label{tab:proxy-santiago}
-\footnotesize
-\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\centering\footnotesize
+\begin{tabular}{|>{\raggedright\arraybackslash\bfseries}p{2.4cm}|c|c|c|c|c|c|c|c|c|}
 \hline
-\rowcolor{gridhead} \textbf{\makecell[l]{Criterios/\\Herram.}} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+\rowcolor{gridhead} \thead[l]{Criterios/\\Herram.} & \thead{Frec.\\SMS} & \thead{Rend.\\(25\%)} & \thead{Esc.\\(20\%)} & \thead{Sop.\\(20\%)} & \thead{Adop.\\(10\%)} & \thead{Obs.\\(10\%)} & \thead{Adec.\\(10\%)} & \thead{Riesgo\\(5\%)} & \thead{DAR} \\ \hline
 HAProxy & 0 & 2,50 & 3,00 & 2,25 & 3,00 & 2,50 & 3,00 & 3,00 & \textbf{2,68} \\ \hline
 \rowcolor{gridrow} NGINX & 1-2 & 3,00 & 2,71 & 2,00 & 2,50 & 2,00 & 3,00 & 3,00 & \textbf{2,59} \\ \hline
 Envoy & 1-2 & 2,25 & 2,86 & 2,50 & 2,00 & 2,50 & 1,00 & 3,00 & \textbf{2,33} \\ \hline
@@ -88,18 +96,18 @@ Linkerd & 0 & 1,25 & 1,71 & 2,25 & 1,50 & 2,33 & 1,00 & 2,00 & \textbf{1,69} \\ 
 Proxy-Service & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
 \rowcolor{gridrow} nuster & 0 & 3,00 & 2,71 & 2,00 & 2,00 & 2,00 & 1,00 & 1,00 & \textbf{2,24} \\ \hline
 \end{tabular}
+\caption{Análisis DAR proxy-caché de Santiago Quintero Uribe}
+\label{tab:dar-proxy-squ}
 \end{table}
 
-En la Tabla~\ref{tab:alm-santiago} se muestran las puntuaciones de almacenamiento asignadas por Santiago Quintero Uribe.
+En la Tabla~\ref{tab:dar-almac-squ} se muestran las puntuaciones de almacenamiento asignadas
+por Santiago Quintero Uribe.
 
 \begin{table}[H]
-\centering
-\caption{Análisis DAR herramientas de almacenamiento de Santiago Quintero Uribe}
-\label{tab:alm-santiago}
-\footnotesize
-\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\centering\footnotesize
+\begin{tabular}{|>{\raggedright\arraybackslash\bfseries}p{2.7cm}|c|c|c|c|c|c|c|c|c|}
 \hline
-\rowcolor{gridhead} \textbf{Herramienta} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+\rowcolor{gridhead} \thead[l]{Herramienta} & \thead{Frec.\\SMS} & \thead{Rend.\\(25\%)} & \thead{Esc.\\(20\%)} & \thead{Sop.\\(20\%)} & \thead{Adop.\\(10\%)} & \thead{Obs.\\(10\%)} & \thead{Adec.\\(10\%)} & \thead{Riesgo\\(5\%)} & \thead{DAR} \\ \hline
 Ceph & 0 & 3,00 & 3,00 & 2,50 & 3,00 & 2,83 & 1,00 & 3,00 & \textbf{2,68} \\ \hline
 \rowcolor{gridrow} Lustre & 0 & 3,00 & 3,00 & 1,25 & 2,00 & 1,83 & 1,00 & 3,00 & \textbf{2,23} \\ \hline
 JuiceFS & 0 & 2,50 & 3,00 & 2,25 & 3,00 & 2,50 & 2,00 & 3,00 & \textbf{2,58} \\ \hline
@@ -123,18 +131,18 @@ GekkoFS & 1 & 2,25 & 2,00 & 1,00 & 2,00 & 1,00 & 1,00 & 1,00 & \textbf{1,61} \\ 
 BurstFS & 1 & 2,25 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,51} \\ \hline
 \rowcolor{gridrow} TEES & 1 & 2,25 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,56} \\ \hline
 \end{tabular}
+\caption{Análisis DAR herramientas de almacenamiento de Santiago Quintero Uribe}
+\label{tab:dar-almac-squ}
 \end{table}
 
-La Tabla~\ref{tab:proxy-juan} contiene la valoración de proxy-caché de Juan Manuel Perdomo Cárdenas.
+La Tabla~\ref{tab:dar-proxy-jmp} contiene la valoración de proxy-caché de Juan Manuel Perdomo
+Cárdenas.
 
 \begin{table}[H]
-\centering
-\caption{Análisis DAR proxy-caché de Juan Manuel Perdomo Cárdenas}
-\label{tab:proxy-juan}
-\footnotesize
-\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\centering\footnotesize
+\begin{tabular}{|>{\raggedright\arraybackslash\bfseries}p{2.4cm}|c|c|c|c|c|c|c|c|c|}
 \hline
-\rowcolor{gridhead} \textbf{\makecell[l]{Criterios/\\Herram.}} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+\rowcolor{gridhead} \thead[l]{Criterios/\\Herram.} & \thead{Frec.\\SMS} & \thead{Rend.\\(25\%)} & \thead{Esc.\\(20\%)} & \thead{Sop.\\(20\%)} & \thead{Adop.\\(10\%)} & \thead{Obs.\\(10\%)} & \thead{Adec.\\(10\%)} & \thead{Riesgo\\(5\%)} & \thead{DAR} \\ \hline
 HAProxy & 0 & 3,00 & 3,00 & 3,00 & 3,00 & 1,67 & 3,00 & 3,00 & \textbf{2,87} \\ \hline
 \rowcolor{gridrow} NGINX & 1-2 & 2,75 & 2,57 & 2,25 & 3,00 & 1,33 & 3,00 & 3,00 & \textbf{2,54} \\ \hline
 Envoy & 1-2 & 1,75 & 2,86 & 3,00 & 3,00 & 2,67 & 1,00 & 3,00 & \textbf{2,43} \\ \hline
@@ -150,18 +158,18 @@ Linkerd & 0 & 1,25 & 2,86 & 3,00 & 2,00 & 3,00 & 1,00 & 2,00 & \textbf{2,18} \\ 
 Proxy-Service & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
 \rowcolor{gridrow} nuster & 0 & 2,75 & 2,14 & 1,00 & 2,00 & 1,17 & 1,00 & 1,00 & \textbf{1,78} \\ \hline
 \end{tabular}
+\caption{Análisis DAR proxy-caché de Juan Manuel Perdomo Cárdenas}
+\label{tab:dar-proxy-jmp}
 \end{table}
 
-Como se aprecia en la Tabla~\ref{tab:alm-juan}, se presentan las puntuaciones de almacenamiento de Juan Manuel Perdomo Cárdenas.
+Como se aprecia en la Tabla~\ref{tab:dar-almac-jmp}, se presentan las puntuaciones de
+almacenamiento de Juan Manuel Perdomo Cárdenas.
 
 \begin{table}[H]
-\centering
-\caption{Análisis DAR herramientas de almacenamiento de Juan Manuel Perdomo Cárdenas}
-\label{tab:alm-juan}
-\footnotesize
-\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm} >{\centering\arraybackslash}p{0.8cm} *{6}{>{\centering\arraybackslash}p{1.0cm}} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{0.85cm}}
+\centering\footnotesize
+\begin{tabular}{|>{\raggedright\arraybackslash\bfseries}p{2.7cm}|c|c|c|c|c|c|c|c|c|}
 \hline
-\rowcolor{gridhead} \textbf{Herramienta} & \textbf{\makecell{Frec.\\SMS}} & \textbf{\makecell{Rend.\\(25\%)}} & \textbf{\makecell{Esc.\\(20\%)}} & \textbf{\makecell{Sop.\\(20\%)}} & \textbf{\makecell{Adop.\\(10\%)}} & \textbf{\makecell{Obs.\\(10\%)}} & \textbf{\makecell{Adec.\\(10\%)}} & \textbf{\makecell{Riesgo\\(5\%)}} & \textbf{DAR} \\ \hline
+\rowcolor{gridhead} \thead[l]{Herramienta} & \thead{Frec.\\SMS} & \thead{Rend.\\(25\%)} & \thead{Esc.\\(20\%)} & \thead{Sop.\\(20\%)} & \thead{Adop.\\(10\%)} & \thead{Obs.\\(10\%)} & \thead{Adec.\\(10\%)} & \thead{Riesgo\\(5\%)} & \thead{DAR} \\ \hline
 Ceph & 0 & 2,75 & 3,00 & 2,25 & 3,00 & 2,00 & 1,00 & 3,00 & \textbf{2,49} \\ \hline
 \rowcolor{gridrow} Lustre & 0 & 2,75 & 2,00 & 1,25 & 3,00 & 1,17 & 1,00 & 3,00 & \textbf{2,00} \\ \hline
 JuiceFS & 0 & 2,25 & 3,00 & 2,25 & 2,00 & 2,00 & 2,00 & 3,00 & \textbf{2,36} \\ \hline
@@ -185,4 +193,74 @@ GekkoFS & 1 & 2,00 & 2,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,45} \\ 
 BurstFS & 1 & 1,50 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,13} \\ \hline
 \rowcolor{gridrow} TEES & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
 \end{tabular}
+\caption{Análisis DAR herramientas de almacenamiento de Juan Manuel Perdomo Cárdenas}
+\label{tab:dar-almac-jmp}
+\end{table}
+
+Con base en las valoraciones individuales realizadas por cada integrante
+del proyecto, se consolidan los resultados calculando la media de cada
+criterio para cada herramienta. Las siguientes dos tablas resumen la
+Matriz DAR promedio del equipo y constituyen el insumo final para la
+selección de las tecnologías proxy-caché y de almacenamiento.
+
+La Tabla~\ref{tab:matriz-proxy} consolida la media de las puntuaciones de los tres
+integrantes para las herramientas de proxy-caché.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|>{\raggedright\arraybackslash\bfseries}p{2.4cm}|c|c|c|c|c|c|c|c|c|}
+\hline
+\rowcolor{gridhead} \thead[l]{Criterios/\\Herram.} & \thead{Frec.\\SMS} & \thead{Rend.\\(25\%)} & \thead{Esc.\\(20\%)} & \thead{Sop.\\(20\%)} & \thead{Adop.\\(10\%)} & \thead{Obs.\\(10\%)} & \thead{Adec.\\(10\%)} & \thead{Riesgo\\(5\%)} & \thead{DAR} \\ \hline
+HAProxy & 0 & 2,83 & 3,00 & 2,75 & 3,00 & 1,95 & 3,00 & 3,00 & \textbf{2,80} \\ \hline
+\rowcolor{gridrow} NGINX & 1-2 & 2,83 & 2,62 & 2,17 & 2,83 & 1,44 & 3,00 & 3,00 & \textbf{2,54} \\ \hline
+Envoy & 1-2 & 1,92 & 2,86 & 2,83 & 2,67 & 2,61 & 1,00 & 3,00 & \textbf{2,40} \\ \hline
+\rowcolor{gridrow} Varnish & 0 & 2,67 & 2,00 & 1,25 & 2,50 & 1,28 & 2,00 & 3,00 & \textbf{2,04} \\ \hline
+Traefik & 0 & 1,75 & 2,29 & 3,00 & 2,00 & 2,56 & 2,00 & 3,00 & \textbf{2,30} \\ \hline
+\rowcolor{gridrow} Caddy & 0 & 1,50 & 1,43 & 3,00 & 2,00 & 1,50 & 3,00 & 3,00 & \textbf{2,06} \\ \hline
+Apache Traffic Server & 0 & 2,75 & 1,81 & 2,00 & 2,83 & 1,39 & 2,00 & 3,00 & \textbf{2,22} \\ \hline
+\rowcolor{gridrow} Kong & 1 & 1,75 & 3,00 & 2,08 & 2,67 & 2,83 & 2,00 & 2,00 & \textbf{2,30} \\ \hline
+Squid & 0 & 2,08 & 2,57 & 1,25 & 2,33 & 1,78 & 3,00 & 3,00 & \textbf{2,15} \\ \hline
+\rowcolor{gridrow} Istio & 0 & 1,25 & 2,91 & 2,83 & 2,67 & 2,83 & 1,00 & 2,00 & \textbf{2,21} \\ \hline
+Linkerd & 0 & 1,25 & 2,48 & 2,75 & 1,83 & 2,78 & 1,00 & 2,00 & \textbf{2,02} \\ \hline
+\rowcolor{gridrow} K8Sidecar & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
+Proxy-Service & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
+\rowcolor{gridrow} nuster & 0 & 2,83 & 2,28 & 1,33 & 1,67 & 1,39 & 1,00 & 1,00 & \textbf{1,89} \\ \hline
+\end{tabular}
+\caption{Análisis matriz DAR proxy-caché (media de los integrantes del proyecto)}
+\label{tab:matriz-proxy}
+\end{table}
+
+Finalmente, en la Tabla~\ref{tab:matriz-almac} se presenta la media de las valoraciones de
+almacenamiento, que fundamenta la decisión final del proceso DAR.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|>{\raggedright\arraybackslash\bfseries}p{2.7cm}|c|c|c|c|c|c|c|c|c|}
+\hline
+\rowcolor{gridhead} \thead[l]{Herramienta} & \thead{Frec.\\SMS} & \thead{Rend.\\(25\%)} & \thead{Esc.\\(20\%)} & \thead{Sop.\\(20\%)} & \thead{Adop.\\(10\%)} & \thead{Obs.\\(10\%)} & \thead{Adec.\\(10\%)} & \thead{Riesgo\\(5\%)} & \thead{DAR} \\ \hline
+Ceph & 0 & 2,83 & 3,00 & 2,58 & 3,00 & 2,50 & 1,00 & 3,00 & \textbf{2,63} \\ \hline
+\rowcolor{gridrow} Lustre & 0 & 2,92 & 2,33 & 1,75 & 2,67 & 1,33 & 1,00 & 3,00 & \textbf{2,20} \\ \hline
+JuiceFS & 0 & 2,33 & 3,00 & 2,50 & 2,33 & 2,39 & 2,00 & 3,00 & \textbf{2,51} \\ \hline
+\rowcolor{gridrow} DAOS & 0 & 2,92 & 2,33 & 1,75 & 2,00 & 1,61 & 1,00 & 3,00 & \textbf{2,16} \\ \hline
+SeaweedFS & 0 & 2,58 & 3,00 & 2,50 & 2,67 & 2,00 & 3,00 & 3,00 & \textbf{2,66} \\ \hline
+\rowcolor{gridrow} ROOT / RDataFrame / Spark / Dask / OSCAR & 1 & 1,25 & 1,33 & 1,08 & 2,00 & 1,22 & 1,00 & 3,00 & \textbf{1,37} \\ \hline
+HDFS (EC + ISA-L / SYCL) & 1 & 2,25 & 3,00 & 2,00 & 2,67 & 1,33 & 1,00 & 3,00 & \textbf{2,21} \\ \hline
+\rowcolor{gridrow} Knative + x264 / AV1 & 1 & 1,17 & 1,33 & 1,58 & 1,33 & 2,00 & 1,00 & 2,00 & \textbf{1,41} \\ \hline
+Longhorn & 0 & 1,42 & 2,00 & 1,50 & 2,00 & 2,17 & 1,00 & 3,00 & \textbf{1,72} \\ \hline
+\rowcolor{gridrow} ExaHDF5 & 1 & 2,17 & 1,33 & 1,00 & 1,33 & 1,00 & 1,00 & 3,00 & \textbf{1,49} \\ \hline
+HDF5 & 1-2 & 2,00 & 1,00 & 1,00 & 1,33 & 1,00 & 1,00 & 3,00 & \textbf{1,38} \\ \hline
+\rowcolor{gridrow} MinIO & 0 & 2,17 & 2,33 & 1,75 & 2,33 & 1,78 & 2,00 & 1,00 & \textbf{2,02} \\ \hline
+HDFS & 1 & 1,75 & 2,33 & 2,00 & 2,67 & 1,33 & 1,00 & 3,00 & \textbf{1,95} \\ \hline
+\rowcolor{gridrow} RustFS & 0 & 2,67 & 2,00 & 1,42 & 2,00 & 1,44 & 2,00 & 1,00 & \textbf{1,94} \\ \hline
+BeeOND & 1 & 2,08 & 1,33 & 1,08 & 1,33 & 1,00 & 1,00 & 2,00 & \textbf{1,44} \\ \hline
+\rowcolor{gridrow} OpenStack Swift & 0 & 1,67 & 2,67 & 1,92 & 2,00 & 1,44 & 1,00 & 2,00 & \textbf{1,88} \\ \hline
+Garage & 0 & 1,67 & 2,00 & 2,00 & 2,00 & 1,39 & 3,00 & 2,00 & \textbf{1,96} \\ \hline
+\rowcolor{gridrow} IPFS & 1 & 1,33 & 2,00 & 1,17 & 1,00 & 1,22 & 2,00 & 2,00 & \textbf{1,49} \\ \hline
+GekkoFS & 1 & 2,08 & 1,67 & 1,00 & 1,33 & 1,00 & 1,00 & 1,00 & \textbf{1,44} \\ \hline
+\rowcolor{gridrow} GlusterFS & 0 & 1,75 & 2,00 & 1,33 & 2,00 & 1,17 & 2,00 & 1,00 & \textbf{1,67} \\ \hline
+BurstFS & 1 & 1,75 & 1,33 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & \textbf{1,25} \\ \hline
+\rowcolor{gridrow} TEES & 1 & 1,42 & 1,33 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,22} \\ \hline
+\end{tabular}
+\caption{Análisis matriz DAR herramientas de almacenamiento (media de los integrantes del proyecto)}
+\label{tab:matriz-almac}
 \end{table}

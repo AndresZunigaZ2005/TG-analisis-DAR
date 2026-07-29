@@ -1,9 +1,16 @@
 % =====================================================================
-%  ANÁLISIS DAR — Proxy-Caché y Almacenamiento de Archivos
-%  Grupo de Investigación GRID — Universidad del Quindío
+%  RESUMEN DE LA CARACTERIZACIÓN DE LAS TECNOLOGÍAS
+%  PROXY-CACHÉ Y ALMACENAMIENTO DE ARCHIVOS
 %
-%  Compilar con:  pdflatex main.tex   (dos veces, por las referencias)
-%             o:  latexmk -pdf main.tex
+%  Marco operacional para una solución basada en proxy-caché
+%  en la infraestructura del Grupo de Investigación GRID
+%  Universidad del Quindío — 2025
+%
+%  Compilar:  pdflatex main.tex   (dos veces, por las referencias)
+%         o:  latexmk -pdf main.tex
+%
+%  Para agregar una sección nueva: crea el archivo en secciones/
+%  y añade su \input al final de la lista de abajo.
 % =====================================================================
 \documentclass[11pt,a4paper]{article}
 
@@ -14,16 +21,22 @@
 
 % ---------- Portada --------------------------------------------------
 \input{portada}
-\setcounter{page}{2}                  % La portada cuenta como página 1.
 
-% ---------- Índices (opcional: descomenta si los necesitas) ----------
-% \tableofcontents
+% ---------- Tabla de contenido ---------------------------------------
+\renewcommand{\contentsname}{Tabla de contenido}
+\tableofcontents
+\clearpage
+
+% Si quieres además un índice de tablas, descomenta estas dos líneas:
 % \listoftables
 % \clearpage
 
 % ---------- Contenido ------------------------------------------------
-\input{secciones/01-plantilla-evaluacion}
-\input{secciones/02-analisis-por-integrante}
-\input{secciones/03-consolidacion-resultados}
+\input{secciones/01-metodologia-evaluacion}
+\input{secciones/02-plantilla-evaluacion}
+\input{secciones/03-analisis-dar}
+\input{secciones/04-criterios-evaluacion}
+\input{secciones/05-tecnologia-ganadora}
+\input{secciones/06-referencias}
 
 \end{document}

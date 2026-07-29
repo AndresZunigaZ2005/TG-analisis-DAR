@@ -39,6 +39,8 @@ Thumbs.db
 .vscode/
 .idea/
 
-# ---------- PDF ----------
-# Comenta la línea siguiente si quieres versionar el PDF final
+# ---------- PDF compilado ----------
+# El PDF NO se versiona: es un binario y genera conflictos de merge
+# cada vez que dos personas compilan. Bájenlo de la pestaña Actions.
+# Si el director del trabajo exige el PDF en el repo, comenten la línea.
 main.pdf

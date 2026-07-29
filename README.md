@@ -1,9 +1,10 @@
-# 📊 Análisis DAR — Solución basada en Proxy-Caché para el GRID
+# 📊 Resumen de la caracterización de las Tecnologías Proxy-Caché y Almacenamiento de Archivos
 
-Fuente LaTeX del **Análisis DAR (Decision Analysis and Resolution)** aplicado a las
-tecnologías de **proxy-caché** y **almacenamiento de archivos**, en el marco del proyecto
-*Marco operacional para una solución basada en proxy-caché en la infraestructura del
-Grupo de Investigación GRID de la Universidad del Quindío*.
+Fuente LaTeX del análisis **DAR (Decision Analysis and Resolution)** del modelo CMMI
+aplicado a la selección de tecnologías de proxy-caché y almacenamiento de archivos de
+gran tamaño, en el marco del proyecto *Marco operacional para una solución basada en
+proxy-caché en la infraestructura del Grupo de Investigación GRID de la Universidad del
+Quindío*.
 
 ---
 
@@ -18,11 +19,10 @@ Armenia, Quindío, 2025
 
 ---
 
-## 🧮 Contenido del análisis
+## 🧮 Alcance del análisis
 
-El documento consolida la evaluación de 14 herramientas de proxy-caché y 22 de
-almacenamiento, valoradas de forma independiente por cada integrante sobre siete
-criterios ponderados:
+Se evaluaron **14 tecnologías de proxy-caché** y **22 de almacenamiento**, valoradas de
+forma independiente por cada integrante sobre siete criterios ponderados:
 
 | Criterio | Peso |
 | --- | --- |
@@ -34,7 +34,8 @@ criterios ponderados:
 | Adecuación al contexto GRID | 10 % |
 | Riesgo tecnológico | 5 % |
 
-Escala de valoración: 1 (bajo) a 3 (alto). La puntuación DAR es la suma ponderada.
+Escala: 1 (muy limitado), 2 (aceptable), 3 (excelente / líder). La puntuación DAR es la
+suma ponderada, y los 26 criterios individuales se detallan en la sección 4.
 
 ---
 
@@ -42,50 +43,55 @@ Escala de valoración: 1 (bajo) a 3 (alto). La puntuación DAR es la suma ponder
 
 ```
 .
-├── main.tex                     # Documento principal
-├── portada.tex                  # Portada académica
+├── main.tex                            # Documento principal (aquí se unifica todo)
+├── portada.tex                         # Portada académica (datos parametrizados)
 ├── config/
-│   └── preambulo.tex            # Paquetes, colores y estilos de tabla
+│   └── preambulo.tex                   # Paquetes, colores y estilo de tablas
 ├── secciones/
-│   ├── 01-plantilla-evaluacion.tex
-│   ├── 02-analisis-por-integrante.tex
-│   └── 03-consolidacion-resultados.tex
+│   ├── 01-metodologia-evaluacion.tex
+│   ├── 02-plantilla-evaluacion.tex     # Tablas 1-2
+│   ├── 03-analisis-dar.tex             # Tablas 3-10
+│   ├── 04-criterios-evaluacion.tex     # 7 subsecciones, 26 criterios
+│   ├── 05-tecnologia-ganadora.tex
+│   └── 06-referencias.tex
 ├── logos/
 │   └── logo_uniquindio.png
-├── imagenes/                    # Figuras del documento
+├── imagenes/                           # Figuras del documento
 ├── .github/workflows/
-│   └── compilar-latex.yml       # Compilación automática del PDF
+│   └── compilar-latex.yml              # Compila el PDF en cada push
 └── .gitignore
 ```
+
+**Para agregar una sección nueva:** crea el archivo en `secciones/` y añade su `\input`
+al final de la lista en `main.tex`. No hay que tocar nada más.
 
 ---
 
 ## ⚙️ Compilación
 
-**Local**
-
-```bash
-latexmk -pdf main.tex
-```
-
-o, sin `latexmk`:
+**Local (VS Code + LaTeX Workshop)**
 
 ```bash
 pdflatex main.tex
-pdflatex main.tex   # segunda pasada: resuelve las referencias cruzadas
+pdflatex main.tex   # segunda pasada: resuelve el índice y las referencias a tablas
 ```
 
-**Overleaf**: sube el repositorio completo o impórtalo desde GitHub y fija `main.tex`
-como documento principal.
+La segunda pasada no es opcional: sin ella la tabla de contenido sale vacía y las
+referencias a tablas aparecen como `??`.
 
-**GitHub Actions**: cada `push` a `main` compila el documento y publica `main.pdf`
-como artefacto descargable en la pestaña *Actions*.
+**GitHub Actions:** cada `push` a `main` compila el documento y publica `main.pdf` como
+artefacto descargable en la pestaña *Actions*.
 
 ---
 
 ## 🧾 Convenciones del documento
 
-- Las leyendas de las tablas van **debajo** de cada tabla.
-- Las tablas no se parten entre páginas: se colocan con `[H]` y pasan completas a la
+- Las leyendas de las tablas van **debajo**, configurado en `config/preambulo.tex`.
+- Las tablas **no se parten entre páginas**: se colocan con `[H]` y pasan completas a la
   página siguiente si no caben.
-- Cada tabla tiene su `\label{tab:...}` y se referencia en el texto con `\ref{}`.
+- Las tablas se referencian con `\ref{tab:...}`, nunca escribiendo "Tabla 5" a mano. Así
+  la numeración se ajusta sola si se reordenan.
+- Las cabeceras de tabla multilínea usan `\thead{Texto\\Texto}`, no `\makecell` con
+  `\textbf` (esa combinación no compila).
+- La primera columna de las tablas es `p{}` con texto plano. No usar `\makecell` ahí:
+  crea una tabla interna que ignora el ancho de la columna y desborda la página.

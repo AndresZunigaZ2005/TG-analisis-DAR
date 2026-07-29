@@ -1,0 +1,94 @@
+%% ====================================================================
+%%  Plantilla de evaluación
+%% ====================================================================
+\section{Plantilla de evaluación}\label{sec:plantilla}
+
+A continuación, se presentan las plantillas de evaluación NPO
+construidas para el análisis de las tecnologías proxy-caché y de
+almacenamiento de archivos de gran tamaño. Las calificaciones siguen una
+escala de 1 a 3, donde 1 es ``Muy limitado'', 2 es ``Aceptable'' y 3 es
+``Excelente / Líder''.
+
+En esta plantilla se presentan 6 indicadores que tienen un valor
+ponderado con respecto a la puntuación final de cada una de las
+herramientas; los indicadores que se tienen son evaluados con respecto a
+las métricas que se habían definido en el formulario para la
+caracterización de la organización. Cada una de estas métricas se
+definen en la sección~\ref{sec:criterios}, criterios de evaluación, en donde se detalla la
+importancia de cada una de estas en el contexto del proyecto.
+
+A continuación, se le da un sentido a cada uno de los indicadores con
+respecto a las métricas.
+
+\begin{itemize}
+\item \textbf{Rendimiento técnico (25\%):} Repositorio local de archivos grandes, priorización de tráfico académico, tiempos de descarga deficientes, optimización de ancho de banda, caché de archivos grandes, volúmenes de transferencia altos y tiempos de respuesta promedio.
+\item \textbf{Escalabilidad (20\%):} Repositorio local de archivos grandes, priorización de tráfico académico (QoS), uso no misional de red, gobernanza del tráfico, QoS y priorización, ACL listas blancas/negras, escalabilidad de almacenamiento, políticas formales y diferenciar tráfico misional/no misional.
+\item \textbf{Soporte y Mantenimiento (20\%):} Automatización de certificados SSL, falta de certificados SSL firmados, gestión de certificados digitales y adaptación a cambios.
+\item \textbf{Adopción y Madurez (10\%):} Automatización de certificados SSL, proxy transparente/inverso/estándar e integración con servicios existentes.
+\item \textbf{Observabilidad (10\%):} Uso no misional de red, métricas de uso de red y proxy, toma de decisiones basada en datos, monitoreo en tiempo real y alta disponibilidad, consumo de ancho de banda por usuario, estadísticas de tráfico por categoría y reportes.
+\item \textbf{Adecuación al Contexto GRID (10\%):} Ajuste operativo de la herramienta en el contexto de operaciones del GRID y su escalabilidad.
+\item \textbf{Riesgo Tecnológico (5\%):} Falta de certificados SSL firmados y sección para los estados proyectados para el año 2026 en la Matriz DAR.
+\end{itemize}
+
+La Tabla~\ref{tab:plantilla-proxy} presenta la plantilla de análisis DAR empleada para evaluar
+las herramientas de proxy-caché, con los criterios y sus respectivos
+pesos.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|>{\raggedright\arraybackslash\bfseries}p{2.4cm}|c|c|c|c|c|c|c|c|c|}
+\hline
+\rowcolor{gridhead} \thead[l]{Criterios/\\Herram.} & \thead{Frec.\\SMS} & \thead{Rend.\\(25\%)} & \thead{Esc.\\(20\%)} & \thead{Sop.\\(20\%)} & \thead{Adop.\\(10\%)} & \thead{Obs.\\(10\%)} & \thead{Adec.\\(10\%)} & \thead{Riesgo\\(5\%)} & \thead{DAR} \\ \hline
+HAProxy & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} NGINX & 1-2 &  &  &  &  &  &  &  &  \\ \hline
+Envoy & 1-2 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} Varnish & 0 &  &  &  &  &  &  &  &  \\ \hline
+Traefik & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} Caddy & 0 &  &  &  &  &  &  &  &  \\ \hline
+Apache Traffic Server & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} Kong & 1 &  &  &  &  &  &  &  &  \\ \hline
+Squid & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} Istio & 0 &  &  &  &  &  &  &  &  \\ \hline
+Linkerd & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} K8Sidecar & 1 &  &  &  &  &  &  &  &  \\ \hline
+Proxy-Service & 1 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} nuster & 0 &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}
+\caption{Plantilla análisis DAR proxy-caché}
+\label{tab:plantilla-proxy}
+\end{table}
+
+De igual manera, en la Tabla~\ref{tab:plantilla-almac} se muestra la plantilla de análisis DAR
+aplicada a las herramientas de almacenamiento.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabular}{|>{\raggedright\arraybackslash\bfseries}p{2.7cm}|c|c|c|c|c|c|c|c|c|}
+\hline
+\rowcolor{gridhead} \thead[l]{Herramienta} & \thead{Frec.\\SMS} & \thead{Rend.\\(25\%)} & \thead{Esc.\\(20\%)} & \thead{Sop.\\(20\%)} & \thead{Adop.\\(10\%)} & \thead{Obs.\\(10\%)} & \thead{Adec.\\(10\%)} & \thead{Riesgo\\(5\%)} & \thead{DAR} \\ \hline
+Ceph & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} Lustre & 0 &  &  &  &  &  &  &  &  \\ \hline
+JuiceFS & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} DAOS & 0 &  &  &  &  &  &  &  &  \\ \hline
+SeaweedFS & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} ROOT / RDataFrame / Spark / Dask / OSCAR & 1 &  &  &  &  &  &  &  &  \\ \hline
+HDFS (EC + ISA-L / SYCL) & 1 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} Knative + x264 / AV1 & 1 &  &  &  &  &  &  &  &  \\ \hline
+Longhorn & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} ExaHDF5 & 1 &  &  &  &  &  &  &  &  \\ \hline
+HDF5 & 1-2 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} MinIO & 0 &  &  &  &  &  &  &  &  \\ \hline
+HDFS & 1 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} RustFS & 0 &  &  &  &  &  &  &  &  \\ \hline
+BeeOND & 1 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} OpenStack Swift & 0 &  &  &  &  &  &  &  &  \\ \hline
+Garage & 0 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} IPFS & 1 &  &  &  &  &  &  &  &  \\ \hline
+GekkoFS & 1 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} GlusterFS & 0 &  &  &  &  &  &  &  &  \\ \hline
+BurstFS & 1 &  &  &  &  &  &  &  &  \\ \hline
+\rowcolor{gridrow} TEES & 1 &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}
+\caption{Plantilla análisis DAR almacenamiento}
+\label{tab:plantilla-almac}
+\end{table}
