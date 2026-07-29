@@ -15,7 +15,7 @@ Quindío*.
 - Andrés Felipe Zúñiga Zuluaga
 
 Universidad del Quindío · Facultad de Ingeniería · Ingeniería de Sistemas y Computación
-Armenia, Quindío, 2025
+Armenia, Quindío, 2026
 
 ---
 
