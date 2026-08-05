@@ -1,0 +1,122 @@
+%% ====================================================================
+%%  Criterios de evaluación
+%% ====================================================================
+\section{Criterios de evaluación}\label{sec:criterios}
+
+\subsection{Necesidades}
+
+\subsubsection{Repositorio local archivos grandes}
+
+Esta métrica evalúa la capacidad de la tecnología de almacenamiento para gestionar objetos de gran tamaño, como imágenes ISO y máquinas virtuales, de forma nativa y persistente. Una calificación de 3 requiere soporte nativo para objetos superiores a 1 GB con hit ratio mayor al 80 \%, replicación o erasure coding integrados, y persistencia garantizada documentada en benchmarks oficiales, lo cual evita descargas repetidas a través de la WAN y acelera los laboratorios del GRID.
+
+\subsubsection{Priorización tráfico académico (QoS)}
+
+Mide la capacidad de la herramienta para clasificar y priorizar el tráfico misional (docencia e investigación) frente al tráfico no misional. Una puntuación excelente exige mecanismos nativos avanzados de QoS con ACLs granulares, rate limiting por clase de tráfico, circuit breaking o priority routing, garantizando el ancho de banda necesario para las actividades académicas del grupo.
+
+\subsubsection{Métricas uso red y proxy}
+
+Evalúa si la solución ofrece métricas nativas de consumo de ancho de banda por usuario o dispositivo, y volumen por tipo de contenido. La calificación máxima requiere un endpoint /metrics compatible con Prometheus, stats API granular o CSI metrics nativo, permitiendo la toma de decisiones basada en datos (KPIs) sin depender de exporters externos obligatorios.
+
+\subsubsection{Automatización certificados SSL}
+
+Analiza el soporte nativo para la gestión automática de certificados firmados por entidades externas como Let's Encrypt. La puntuación más alta se otorga cuando la herramienta ofrece HTTPS/TLS automático ``by default'' con rotación integrada y sin necesidad de scripts externos ni intervención manual, eliminando advertencias de sitios inseguros y aumentando la confianza de la comunidad académica.
+
+\subsection{Problemas}
+
+\subsubsection{Tiempos de descarga deficientes}
+
+Mide la latencia en la descarga de ISOs desde la red GRID hacia los usuarios finales. Una calificación de 3 exige sub-milisegundo en cache hit o tiempos documentados menores a 60 segundos para ISOs de 1 GB, con throughput masivo sostenido superior a 10 GB/s, resolviendo el cuello de botella de red actual de la infraestructura TI de la universidad.
+
+\subsubsection{Uso no misional de red}
+
+Evalúa la capacidad de identificar, filtrar y priorizar el tráfico de entretenimiento frente al académico. La puntuación máxima requiere ACLs granulares nativas, rate limiting por categoría y tagging o metadata nativo, permitiendo bloquear o priorizar tráfico no misional de forma declarativa o automática, evitando que obstaculice clases virtuales y laboratorios.
+
+\subsubsection{Falta certificados SSL firmados}
+
+Analiza si la herramienta permite eliminar las advertencias de sitios web inseguros del GRID mediante TLS nativo y compatibilidad confirmada con Let's Encrypt, incluyendo rotación automática de certificados sin intervención operativa, lo cual afecta directamente la confianza de la comunidad académica en los servicios internos.
+
+\subsection{Oportunidades}
+
+\subsubsection{Gobernanza del tráfico}
+
+Mide la existencia de un framework declarativo y dinámico para el control de contenido que transita por la infraestructura. La calificación más alta requiere configuración declarativa nativa, versionado y runtime API dinámica (xDS, CRD Kubernetes, hot reload) que permita gobernanza en tiempo real sin downtime, otorgando control administrativo completo del tráfico.
+
+\subsubsection{Optimización ancho de banda}
+
+Evalúa los mecanismos para limitar el uso por usuario y priorizar el tráfico misional. Una puntuación de 3 exige rate limiting nativo por usuario o frontend, QoS por categoría y algoritmos de cola avanzados (prio, wrr, circuit breaking), maximizando el uso misional del ancho de banda y reduciendo costos WAN.
+
+\subsubsection{Toma decisiones basada en datos}
+
+Analiza la capacidad de generar KPIs declarados para monitoreo y reportes. La calificación máxima requiere dashboard nativo, métricas Prometheus completas y reportes automáticos integrados, permitiendo identificar patrones de uso y optimizar la infraestructura sin complementos críticos externos.
+
+\subsection{Criterios Funcionales}
+
+\subsubsection{Cache archivos grandes}
+
+Evalúa la funcionalidad de caché HTTP optimizada para objetos mayores a 1 GB. Una calificación de 3 requiere caché nativa con hit ratio superior al 80 \% documentado, sub-milisegundo en cache hit o speedup confirmado de 100x+ en benchmarks oficiales, constituyendo el requisito funcional principal del proxy-caché para el GRID.
+
+\subsubsection{QoS y priorización}
+
+Mide los mecanismos para priorizar tráfico misional con granularidad por usuario, IP o contenido. La puntuación máxima exige QoS nativo múltiple con colas, rate limit, circuit breaking y priority routing, alineándose totalmente con los objetivos misionales del grupo de investigación.
+
+\subsubsection{ACL listas blancas/negras}
+
+Analiza el control de acceso por usuario, IP, contenido, header, método, payload, geolocalización, regex o JWT. Una calificación de 3 requiere ACLs nativas de granularidad máxima, permitiendo control total de acceso y fortaleciendo la seguridad perimetral del GRID.
+
+\subsubsection{Proxy transparente/inverso/estándar}
+
+Evalúa el soporte multimodal del proxy según la arquitectura requerida. La puntuación más alta exige soporte nativo de todos los modos (inverso, transparente TPROXY, estándar, passthrough, edge gateway) con documentación oficial de producción, garantizando flexibilidad arquitectónica.
+
+\subsubsection{Gestión certificados digitales}
+
+Mide el soporte para TLS, mTLS y rotación automática de certificados. Una calificación de 3 requiere TLS y mTLS nativos con rotación automática mediante SDS, auto-HTTPS o cert-manager nativo, sin downtime ni scripts externos, asegurando la seguridad en tránsito y la confianza de los usuarios.
+
+\subsection{Criterios Técnicos}
+
+\subsubsection{Escalabilidad almacenamiento}
+
+Evalúa la capacidad de crecer horizontalmente sin reemplazar hardware. La puntuación máxima requiere auto-scaling horizontal nativo, replicación o erasure coding sin reemplazo de hardware y auto-healing (CRUSH, CSI, master/volume auto-scaling), asegurando el crecimiento futuro de los recursos del GRID.
+
+\subsubsection{Volúmenes transferencia altos}
+
+Mide la capacidad de soportar throughput masivo concurrente. Una calificación de 3 exige throughput sostenido superior a 10 GB/s documentado en benchmarks oficiales (ej. 200+ GB/s en HPC, $>$500K IOPS NVMe), garantizando el soporte a eventos masivos como talleres e instalación de laboratorios.
+
+\subsubsection{Integración servicios existentes}
+
+Analiza la compatibilidad con la infraestructura actual del GRID. La puntuación más alta requiere integración plug-and-play con infraestructura legacy y moderna, con más de 20 años en producción enterprise o académica, documentación extensa y market share probado, minimizando cambios arquitectónicos.
+
+\subsubsection{Monitoreo tiempo real + alta disponibilidad}
+
+Evalúa la capacidad de dashboard en tiempo real, alertas y alta disponibilidad. Una calificación de 3 requiere Prometheus nativo, health checks y HA multi-active (MDS/RGW, CSI, cluster nativo) con dashboard en tiempo real sin dependencias críticas externas, evitando pérdida de información y downtime.
+
+\subsection{Criterios Monitoreo}
+
+\subsubsection{Consumo ancho de banda por usuario}
+
+Mide la granularidad de las métricas de bandwidth por usuario o dispositivo en tiempo real. La puntuación máxima exige métrica nativa granular con exporter oficial, CSI metrics o telemetry nativa, incluyendo histórico integrado, para garantizar el cumplimiento de políticas de uso y fairness en la red.
+
+\subsubsection{Estadísticas tráfico por categoría}
+
+Evalúa la clasificación automática del tráfico en académico, administrativo y no misional. Una calificación de 3 requiere clasificación automática nativa por categoría con tagging, ACL labels o analytics nativo por service/route, presentando top 10 categorías en dashboard para facilitar la priorización y gobernanza.
+
+\subsubsection{Tiempos de respuesta promedio}
+
+Mide la latencia promedio del proxy y del storage. La puntuación más alta exige sub-milisegundo en cache hit documentado en benchmarks oficiales con throughput sostenido (42k+ RPS), cumpliendo con el SLA de experiencia de usuario establecido para el GRID.
+
+\subsubsection{Reportes}
+
+Analiza la capacidad de generación de reportes periódicos automáticos. Una calificación de 3 requiere reportes automáticos nativos con exportación en múltiples formatos (PDF, CSV, email), distribución programada y analytics nativo, permitiendo la toma de decisiones administrativas sin depender de stacks externos como ELK o Loki.
+
+\subsection{Criterios Gobernanza}
+
+\subsubsection{Políticas formales}
+
+Evalúa la existencia de un framework de políticas estructurado para los servicios del GRID. La puntuación máxima requiere framework declarativo nativo con versionado y runtime API dinámica (xDS, CRD Kubernetes, hot reload), permitiendo gobernanza estructurada sin downtime ni configuración ad-hoc.
+
+\subsubsection{Diferenciar tráfico misional/no misional}
+
+Mide la capacidad de clasificación automática y tagging del tráfico. Una calificación de 3 exige auto-classification nativa por metadata, ACL o tagging (header-based, labeling Kubernetes, RBAC filters) con aplicación automática de políticas diferenciadas, asegurando la alineación estratégica del GRID.
+
+\subsubsection{Adaptación a cambios}
+
+Analiza la capacidad de modificar políticas sin downtime. La puntuación más alta requiere hot reload, runtime API o xDS dinámico nativo, permitiendo modificar ACLs, backends, certificados y políticas en tiempo real, garantizando flexibilidad ante cambios de contexto operativo o académico.
