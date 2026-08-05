@@ -30,6 +30,95 @@ respecto a las métricas.
 \item \textbf{Riesgo Tecnológico (5\%):} Falta de certificados SSL firmados y sección para los estados proyectados para el año 2026 en la Matriz DAR.
 \end{itemize}
 
+\subsection{Cómo se calcula la puntuación de cada herramienta}\label{subsec:formalizacion}
+
+Para que cualquier persona pueda reproducir o verificar los resultados,
+en esta subsección se explica paso a paso cómo se pasa de las
+calificaciones individuales de cada métrica a la puntuación DAR final de
+una herramienta. El procedimiento consta de dos pasos: primero se calcula
+el valor de cada indicador y después se combinan todos los indicadores en
+una sola puntuación.
+
+\subsubsection{Paso 1: obtener el valor de cada indicador}
+
+Cada indicador agrupa varias métricas y todas ellas pesan lo mismo dentro
+del indicador. Por eso, el valor del indicador es simplemente el
+\textbf{promedio} de las calificaciones que la herramienta obtuvo en sus
+métricas; es decir, se suman esas calificaciones y el resultado se divide
+entre el número de métricas:
+
+\[
+  \text{Valor del indicador} \;=\;
+  \frac{\text{suma de las calificaciones de sus métricas}}
+       {\text{cantidad de métricas del indicador}}
+\]
+
+Como cada métrica se califica de 1 a 3, el promedio siempre queda también
+entre 1 y 3. Esto es importante porque permite comparar indicadores entre
+sí aunque unos agrupen más métricas que otros.
+
+Según la lista anterior, cada indicador se calcula así:
+
+\[
+  \text{Rendimiento técnico} =
+  \frac{\text{suma de sus 7 métricas}}{7}
+  \qquad
+  \text{Escalabilidad} =
+  \frac{\text{suma de sus 9 métricas}}{9}
+\]
+\[
+  \text{Soporte y mantenimiento} =
+  \frac{\text{suma de sus 4 métricas}}{4}
+  \qquad
+  \text{Adopción y madurez} =
+  \frac{\text{suma de sus 3 métricas}}{3}
+\]
+\[
+  \text{Observabilidad} =
+  \frac{\text{suma de sus 7 métricas}}{7}
+\]
+
+Por ejemplo, si una herramienta obtiene calificaciones de 3, 3, 2 y 2 en
+las cuatro métricas de soporte y mantenimiento, el valor de ese indicador
+es $(3+3+2+2) \div 4 = 2{,}5$.
+
+Los dos indicadores restantes, adecuación al contexto GRID y riesgo
+tecnológico, no se obtienen con este promedio, sino a partir de una
+valoración del ajuste operativo de la herramienta en el GRID y de los
+estados proyectados para el año 2026.
+
+\subsubsection{Paso 2: obtener la puntuación DAR}
+
+A diferencia de las métricas, los indicadores \textbf{no} pesan todos lo
+mismo: cada uno tiene asignado un porcentaje según su importancia para el
+proyecto. Por eso la puntuación DAR no es un promedio simple, sino un
+\textbf{promedio ponderado}: el valor de cada indicador se multiplica por
+su porcentaje y luego se suman todos los resultados.
+
+\begin{align*}
+  \text{DAR} \;=\;\; & 0{,}25 \times \text{Rendimiento técnico}
+                 \;+\; 0{,}20 \times \text{Escalabilidad} \\[0.2em]
+       &+\; 0{,}20 \times \text{Soporte y mantenimiento}
+        \;+\; 0{,}10 \times \text{Adopción y madurez} \\[0.2em]
+       &+\; 0{,}10 \times \text{Observabilidad}
+        \;+\; 0{,}10 \times \text{Adecuación al contexto GRID} \\[0.2em]
+       &+\; 0{,}05 \times \text{Riesgo tecnológico}
+\end{align*}
+
+Los factores $0{,}25$, $0{,}20$, $0{,}10$ y $0{,}05$ son los porcentajes
+de la lista anterior escritos en forma decimal ($25\,\%$, $20\,\%$,
+$10\,\%$ y $5\,\%$), y entre todos suman el $100\,\%$ de la evaluación.
+Así, un buen resultado en rendimiento técnico influye cinco veces más en
+la puntuación final que un buen resultado en riesgo tecnológico.
+
+Como todos los indicadores están entre 1 y 3 y los porcentajes suman el
+$100\,\%$, la puntuación DAR también queda entre 1 y 3: un valor cercano
+a 3 indica una herramienta líder frente a los criterios priorizados por
+el GRID, mientras que un valor cercano a 1 señala una alternativa muy
+limitada para las necesidades del proyecto. Esta puntuación es la que se
+reporta en la última columna de las plantillas y la que permite ordenar
+las herramientas en el análisis DAR.
+
 La Tabla~\ref{tab:plantilla-proxy} presenta la plantilla de análisis DAR empleada para evaluar
 las herramientas de proxy-caché, con los criterios y sus respectivos
 pesos.

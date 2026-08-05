@@ -49,9 +49,9 @@ suma ponderada, y los 26 criterios individuales se detallan en la sección 4.
 │   └── preambulo.tex                   # Paquetes, colores y estilo de tablas
 ├── secciones/
 │   ├── 01-metodologia-evaluacion.tex
-│   ├── 02-plantilla-evaluacion.tex     # Tablas 1-2
+│   ├── 02-criterios-evaluacion.tex     # 7 subsecciones, 26 criterios
 │   ├── 03-analisis-dar.tex             # Tablas 3-10
-│   ├── 04-criterios-evaluacion.tex     # 7 subsecciones, 26 criterios
+│   ├── 04-plantilla-evaluacion.tex     # Tablas 1-2
 │   ├── 05-tecnologia-ganadora.tex
 │   └── 06-referencias.tex
 ├── logos/
