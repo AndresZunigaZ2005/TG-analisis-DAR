@@ -27,7 +27,7 @@ Traefik & 0 & 1,75 & 2,29 & 3,00 & 2,00 & 2,67 & 2,00 & 3,00 & \textbf{2,31} \\ 
 \rowcolor{gridrow} Caddy & 0 & 1,50 & 1,29 & 3,00 & 2,00 & 1,33 & 3,00 & 3,00 & \textbf{2,02} \\ \hline
 Apache Traffic Server & 0 & 2,75 & 1,71 & 2,00 & 3,00 & 1,00 & 2,00 & 3,00 & \textbf{2,18} \\ \hline
 \rowcolor{gridrow} Kong & 1 & 1,50 & 3,00 & 2,00 & 3,00 & 3,00 & 2,00 & 2,00 & \textbf{2,28} \\ \hline
-Squid & 0 & 1,25 & 2,57 & 1,00 & 2,00 & 1,00 & 3,00 & 3,00 & \textbf{1,78} \\ \hline
+Squid & 0 & 2 & 2,29 & 2,00 & 3,00 & 2,00 & 3,00 & 3,00 & \textbf{2,31} \\ \hline
 \rowcolor{gridrow} Istio & 0 & 1,25 & 2,86 & 3,00 & 3,00 & 3,00 & 1,00 & 2,00 & \textbf{2,28} \\ \hline
 Linkerd & 0 & 1,25 & 2,86 & 3,00 & 2,00 & 3,00 & 1,00 & 2,00 & \textbf{2,18} \\ \hline
 \rowcolor{gridrow} K8Sidecar & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
@@ -89,7 +89,7 @@ Traefik & 0 & 1,75 & 2,29 & 3,00 & 2,00 & 2,33 & 2,00 & 3,00 & \textbf{2,28} \\ 
 \rowcolor{gridrow} Caddy & 0 & 1,50 & 1,71 & 3,00 & 2,00 & 1,83 & 3,00 & 3,00 & \textbf{2,15} \\ \hline
 Apache Traffic Server & 0 & 2,75 & 2,00 & 2,00 & 2,50 & 2,00 & 2,00 & 3,00 & \textbf{2,29} \\ \hline
 \rowcolor{gridrow} Kong & 1 & 2,25 & 3,00 & 2,25 & 2,00 & 2,50 & 2,00 & 2,00 & \textbf{2,36} \\ \hline
-Squid & 0 & 2,25 & 2,43 & 1,50 & 2,50 & 2,17 & 3,00 & 3,00 & \textbf{2,26} \\ \hline
+Squid & 0 & 2,25 & 2,43 & 1,50 & 2,50 & 2,17 & 3,00 & 3,00 & \textbf{2,27} \\ \hline
 \rowcolor{gridrow} Istio & 0 & 1,25 & 3,00 & 2,50 & 2,00 & 2,50 & 1,00 & 2,00 & \textbf{2,06} \\ \hline
 Linkerd & 0 & 1,25 & 1,71 & 2,25 & 1,50 & 2,33 & 1,00 & 2,00 & \textbf{1,69} \\ \hline
 \rowcolor{gridrow} K8Sidecar & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
@@ -144,7 +144,7 @@ Cárdenas.
 \hline
 \rowcolor{gridhead} \thead[l]{Criterios/\\Herram.} & \thead{Frec.\\SMS} & \thead{Rend.\\(25\%)} & \thead{Esc.\\(20\%)} & \thead{Sop.\\(20\%)} & \thead{Adop.\\(10\%)} & \thead{Obs.\\(10\%)} & \thead{Adec.\\(10\%)} & \thead{Riesgo\\(5\%)} & \thead{DAR} \\ \hline
 HAProxy & 0 & 3,00 & 3,00 & 3,00 & 3,00 & 1,67 & 3,00 & 3,00 & \textbf{2,87} \\ \hline
-\rowcolor{gridrow} NGINX & 1-2 & 2,75 & 2,57 & 2,25 & 3,00 & 1,33 & 3,00 & 3,00 & \textbf{2,54} \\ \hline
+\rowcolor{gridrow} NGINX & 1-2 & 2,75 & 2,57 & 2,25 & 3,00 & 1,33 & 3,00 & 3,00 & \textbf{2,53} \\ \hline
 Envoy & 1-2 & 1,75 & 2,86 & 3,00 & 3,00 & 2,67 & 1,00 & 3,00 & \textbf{2,43} \\ \hline
 \rowcolor{gridrow} Varnish & 0 & 2,75 & 2,14 & 1,25 & 2,50 & 1,00 & 2,00 & 3,00 & \textbf{2,07} \\ \hline
 Traefik & 0 & 1,75 & 2,29 & 3,00 & 2,00 & 2,67 & 2,00 & 3,00 & \textbf{2,31} \\ \hline
@@ -211,7 +211,7 @@ integrantes para las herramientas de proxy-caché.
 \begin{tabular}{|>{\raggedright\arraybackslash\bfseries}p{2.4cm}|c|c|c|c|c|c|c|c|c|}
 \hline
 \rowcolor{gridhead} \thead[l]{Criterios/\\Herram.} & \thead{Frec.\\SMS} & \thead{Rend.\\(25\%)} & \thead{Esc.\\(20\%)} & \thead{Sop.\\(20\%)} & \thead{Adop.\\(10\%)} & \thead{Obs.\\(10\%)} & \thead{Adec.\\(10\%)} & \thead{Riesgo\\(5\%)} & \thead{DAR} \\ \hline
-HAProxy & 0 & 2,83 & 3,00 & 2,75 & 3,00 & 1,95 & 3,00 & 3,00 & \textbf{2,80} \\ \hline
+HAProxy & 0 & 2,83 & 3,00 & 2,75 & 3,00 & 1,9 & 3,00 & 3,00 & \textbf{2,80} \\ \hline
 \rowcolor{gridrow} NGINX & 1-2 & 2,83 & 2,62 & 2,17 & 2,83 & 1,44 & 3,00 & 3,00 & \textbf{2,54} \\ \hline
 Envoy & 1-2 & 1,92 & 2,86 & 2,83 & 2,67 & 2,61 & 1,00 & 3,00 & \textbf{2,40} \\ \hline
 \rowcolor{gridrow} Varnish & 0 & 2,67 & 2,00 & 1,25 & 2,50 & 1,28 & 2,00 & 3,00 & \textbf{2,04} \\ \hline
@@ -219,8 +219,8 @@ Traefik & 0 & 1,75 & 2,29 & 3,00 & 2,00 & 2,56 & 2,00 & 3,00 & \textbf{2,30} \\ 
 \rowcolor{gridrow} Caddy & 0 & 1,50 & 1,43 & 3,00 & 2,00 & 1,50 & 3,00 & 3,00 & \textbf{2,06} \\ \hline
 Apache Traffic Server & 0 & 2,75 & 1,81 & 2,00 & 2,83 & 1,39 & 2,00 & 3,00 & \textbf{2,22} \\ \hline
 \rowcolor{gridrow} Kong & 1 & 1,75 & 3,00 & 2,08 & 2,67 & 2,83 & 2,00 & 2,00 & \textbf{2,30} \\ \hline
-Squid & 0 & 2,08 & 2,57 & 1,25 & 2,33 & 1,78 & 3,00 & 3,00 & \textbf{2,15} \\ \hline
-\rowcolor{gridrow} Istio & 0 & 1,25 & 2,91 & 2,83 & 2,67 & 2,83 & 1,00 & 2,00 & \textbf{2,21} \\ \hline
+Squid & 0 & 2,33 & 2,48 & 1,58 & 2,67 & 2,11 & 3,00 & 3,00 & \textbf{2,32} \\ \hline
+\rowcolor{gridrow} Istio & 0 & 1,25 & 2,90 & 2,83 & 2,67 & 2,83 & 1,00 & 2,00 & \textbf{2,21} \\ \hline
 Linkerd & 0 & 1,25 & 2,48 & 2,75 & 1,83 & 2,78 & 1,00 & 2,00 & \textbf{2,02} \\ \hline
 \rowcolor{gridrow} K8Sidecar & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
 Proxy-Service & 1 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 1,00 & 2,00 & \textbf{1,05} \\ \hline
